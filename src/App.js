@@ -8,7 +8,7 @@ function App() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const checkUserToken = () => {
-        const userToken = localStorage.getItem('user-token');
+        const userToken = localStorage.getItem('user');
         if (!userToken || userToken === 'undefined') {
             setIsLoggedIn(false);
         }
@@ -23,7 +23,7 @@ function App() {
 		<React.Fragment>
 			{isLoggedIn && <PortalNavbar />}
 			<Outlet />
-			{isLoggedIn && <PortalFooter />}
+			{/* {isLoggedIn && <PortalFooter />} */}
 		</React.Fragment>
 	);
 }

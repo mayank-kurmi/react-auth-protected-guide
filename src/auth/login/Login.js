@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useState } from "react";
 import {
   Button,
@@ -9,23 +9,21 @@ import {
   FormLabel,
   Row,
 } from "react-bootstrap";
-//import {useNavigate } from "react-router-dom";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   //const  = "eve.holt@reqres.in";
   //const  = "cityslicka";
   const [enteredUserEmail, setEnteredUserEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
   const [showAlert, setShowAlert] = useState(false);
-  const loginAPI = "https://reqres.in/api";
+
   const navigate = useNavigate();
 
   const submitLoginForm = (event) => {
     //debugger;
     event.preventDefault();
-    const headers = {
-      "Content-Type": "application/json",
-    };
+
     const formElement = document.querySelector("#loginForm");
     const formData = new FormData(formElement);
     const formDataJSON = Object.fromEntries(formData);
@@ -38,8 +36,8 @@ const Login = () => {
     if (userStoredValue) {
       const userDetails = JSON.parse(userStoredValue);
       if (
-        userData.email == userDetails.email &&
-        userData.password == userDetails.password
+        userData.email === userDetails.email &&
+        userData.password === userDetails.password
       ) {
         //localStorage.setItem("user-token", token);
         setTimeout(() => {
@@ -49,34 +47,6 @@ const Login = () => {
     } else {
       setShowAlert(true);
     }
-    /* const btnPointer = document.querySelector("#login-btn");
-    btnPointer.innerHTML = "Please wait..";
-    btnPointer.setAttribute("disabled", true);
-
-    axios
-      .post(loginAPI + "/login", JSON.stringify(userData), {
-        headers: headers,
-      })
-      .then((response) => {
-        btnPointer.innerHTML = "Login";
-        btnPointer.removeAttribute("disabled");
-        const data = response.data;
-        const token = data.token;
-        if (!token) {
-          alert("Unable to login. Please try after some time.");
-          return;
-        }
-        localStorage.clear();
-        localStorage.setItem("user-token", token);
-        setTimeout(() => {
-          navigate("/");
-        }, 500);
-      })
-      .catch((error) => {
-        btnPointer.innerHTML = "Login";
-        btnPointer.removeAttribute("disabled");
-        alert("Oops! Some error occured.");
-      }); */
   };
 
   const handleInputChange = (e) => {
@@ -85,20 +55,19 @@ const Login = () => {
     const eleValue = e.target.value;
     switch (eleName) {
       case "email":
-        setEnteredUserEmail(e.target.value);
+        setEnteredUserEmail(eleValue);
         break;
       case "password":
-        setEnteredPassword(e.target.value);
+        setEnteredPassword(eleValue);
         break;
       default:
         break;
     }
-    const { name, value } = e.target;
   };
 
-  const handleSignUp = () => {
-    navigate("/auth/signup");
-  };
+  // const handleSignUp = () => {
+  //   navigate("/auth/signup");
+  // };
   return (
     <React.Fragment>
       <Container className="my-5">
@@ -138,7 +107,7 @@ const Login = () => {
                   required
                 />
               </FormGroup>
-              <Button type="submit" className="btn-success mt-2" id="login-btn">
+              <Button type="submit" className="btn-primary mt-2" id="login-btn">
                 Login
               </Button>
               {/* <RouterLink >

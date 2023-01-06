@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   Button,
@@ -10,7 +9,6 @@ import {
   Row,
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
 
 const SignUp = () => {
   const [formValues, setFormValues] = useState({
@@ -36,17 +34,15 @@ const SignUp = () => {
     },
     isFormValid: false,
   });
-  const loginAPI = "https://reqres.in/api";
+
   const navigate = useNavigate();
 
   const submitSignUpForm = (event) => {
     debugger;
     event.preventDefault();
-    const headers = {
-      "Content-Type": "application/json",
-    };
-    const formElement = document.querySelector("#signUpForm");
-    const formData = new FormData(formElement);
+
+    //const formElement = document.querySelector("#signUpForm");
+    //const formData = new FormData(formElement);
 
     const formFields = Object.keys(formValues);
     let newFormValues = { ...formValues };
@@ -151,7 +147,6 @@ const SignUp = () => {
                   id={"idemail"}
                   name="email"
                   onChange={handleChange}
-                  
                   value={formValues.email.value}
                   required
                 />
@@ -169,7 +164,7 @@ const SignUp = () => {
                   required
                 />
               </FormGroup>
-              <Button type="submit" className="btn-success mt-2" id="login-btn">
+              <Button type="submit" className="btn-primary" id="signup-btn">
                 SignUp
               </Button>
             </Form>

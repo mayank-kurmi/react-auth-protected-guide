@@ -1,14 +1,16 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
+
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 const AuthNavbar = () => {
   return (
     <React.Fragment>
-      <Navbar bg="dark" expand="lg" className="navbar-dark">
+      <Navbar
+        className="navbar navbar-light"
+        style={{ backgroundColor: "#e3f2fd" }}
+      >
         <div className="container-fluid">
-          <a className="navbar-brand">React Auth Demo</a>
+          <a className="navbar-brand">Shopping Bliss</a>
 
           <button
             className="navbar-toggler"
