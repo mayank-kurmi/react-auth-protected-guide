@@ -38,7 +38,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const submitSignUpForm = (event) => {
-    debugger;
+    //debugger;
     event.preventDefault();
 
     //const formElement = document.querySelector("#signUpForm");
@@ -91,7 +91,7 @@ const SignUp = () => {
     }
   };
   const setLocalStorage = (keyName, Value) => {
-    debugger;
+    //debugger;
     try {
       window.localStorage.setItem(keyName, JSON.stringify(Value));
     } catch (err) {}
