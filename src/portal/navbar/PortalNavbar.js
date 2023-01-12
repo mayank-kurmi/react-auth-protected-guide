@@ -46,9 +46,6 @@ const PortalNavbar = () => {
                   {2}
                 </span>
               </a>
-              {/* <Button className="btn btn-dark" onClick={logout}>
-                Logout
-              </Button> */}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

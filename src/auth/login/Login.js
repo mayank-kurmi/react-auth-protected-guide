@@ -39,7 +39,6 @@ const Login = () => {
         userData.email === userDetails.email &&
         userData.password === userDetails.password
       ) {
-        //localStorage.setItem("user-token", token);
         setTimeout(() => {
           navigate("/");
         }, 500);

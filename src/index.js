@@ -16,6 +16,7 @@ import "font-awesome/css/font-awesome.css";
 import Profile from "./portal/userprofile/Profile";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import CartState from "./portal/context/CartState";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

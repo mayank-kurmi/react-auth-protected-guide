@@ -24,3 +24,4 @@ yarn-error.log*
 
 .zip
 backup22Dec22.zip
+*.zip

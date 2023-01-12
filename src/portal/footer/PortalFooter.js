@@ -12,7 +12,7 @@ const PortalFooter = () => {
   return (
     <React.Fragment>
       <footer className="bg-light border-top py-3 mt-auto">
-        <Container>&copy; React Auth Demo - {year} </Container>
+        <Container>&copy; Shopping Bliss - {year} </Container>
       </footer>
     </React.Fragment>
   );

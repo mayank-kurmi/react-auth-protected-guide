@@ -43,12 +43,6 @@ const AuthNavbar = () => {
                   Sign-Up
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink className="nav-link active" to="/contact-us">
-                  {" "}
-                  Contact Us
-                </NavLink>
-              </li> */}
             </ul>
           </div>
         </div>

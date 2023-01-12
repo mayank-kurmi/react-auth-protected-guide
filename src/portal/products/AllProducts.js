@@ -25,9 +25,7 @@ const AllProducts = (props) => {
               <div className="m-3">
                 <b>${props.price}</b>
               </div>
-              {/* <NavLink className="stretched-link" to={`/product/${props.id}`}>
-               
-              </NavLink> */}
+
               <div className="ms-auto">
                 <button className="btn btn-sm  " onClick={props.handleBuyNow}>
                   <i className="bi bi-bag-heart-fill"></i>

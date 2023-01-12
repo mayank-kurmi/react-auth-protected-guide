@@ -12,13 +12,7 @@ const CartState = (props) => {
     //debugger;
     return cartState;
   };
-  const cartValue = useMemo(
-    () => ({
-      cartState,
-      updateCart,
-    }),
-    [cartState]
-  );
+
   return (
     <CartContext.Provider value={{ cartState, updateCart }}>
       {props.children}

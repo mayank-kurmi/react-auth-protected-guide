@@ -41,9 +41,6 @@ const SignUp = () => {
     //debugger;
     event.preventDefault();
 
-    //const formElement = document.querySelector("#signUpForm");
-    //const formData = new FormData(formElement);
-
     const formFields = Object.keys(formValues);
     let newFormValues = { ...formValues };
 
@@ -113,7 +110,6 @@ const SignUp = () => {
         <h2 className="fw-normal mb-5">Sign Up</h2>
         <Row>
           <Col md={{ span: 6 }}>
-            {/* <FormErrors formErrors={formValues.formErrors}/> */}
             <Form id="signUpForm" onSubmit={submitSignUpForm}>
               <FormGroup className="mb-3">
                 <FormLabel htmlFor={"signup-firstname"}>FirstName</FormLabel>
